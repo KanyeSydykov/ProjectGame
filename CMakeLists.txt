@@ -11,7 +11,8 @@
  set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
- add_executable(Game Game.cpp)
+ add_executable(Game Game.cpp
+         globals.h)
 
  target_link_libraries(Game ${RAYLIB_LIBRARIES})
 

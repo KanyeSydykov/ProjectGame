@@ -1,14 +1,24 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
-#include "raylib.h"
+// Screen dimensions
+const int screenWidth = 800;
+const int screenHeight = 600;
 
-void InitGame();
-void UpdateGame();
-void DrawGame();
-void CloseGame();
+// Game settings
+const float GRAVITY = 0.05f;  // Gravity force (slowed down by 10x)
+const float JUMP_STRENGTH = -1.0f;  //
+const float PLAYER_SPEED = 0.5f;  // Player speed (slowed down by 10x)
 
-extern const int screenWidth;
-extern const int screenHeight;
+// Player settings
+struct Player {
+    Rectangle rect;
+    Vector2 speed;
+    bool onGround;
+};
+
+// Level platforms
+extern Rectangle platforms[];
+extern int totalPlatforms;
 
 #endif
